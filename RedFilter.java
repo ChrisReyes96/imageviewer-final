@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RedFilter extends Filter
 {
     /**
-	 * Constructor for objects of class GrayScaleFilter.
+	 * Constructor for objects of class RedFilter.
 	 * @param name The name of the filter.
 	 */
 	public RedFilter(String name)
@@ -33,8 +33,8 @@ public class RedFilter extends Filter
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
                 Color pix = image.getPixel(x, y);
-                int red = (pix.getRed());
-                image.setPixel(x, y, new Color(red, red, red));
+                int red = pix.getRed();
+                image.setPixel(x, y, new Color(red, 0, 0));
             }
         }
     }
